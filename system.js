@@ -280,12 +280,12 @@ function convertDatasetToHTML(dataset, modeConvert, listConverted)
 		const PalSuffix = Pal.suffix.toUpperCase(); //將型態文字轉為大寫用以顯示在編號後
 		
 		//製作帕魯的屬性圖案
-		const htmlPalElement = Pal.typeElement.map(name => `<img src="images/elements/1/${name}.png">`).join(''); //遍歷帕魯的屬性並加入對應的圖案
+		const htmlPalElement = Pal.typeElement.map(name => `<img src="images/elements/1/${name.toLowerCase()}.png">`).join(''); //遍歷帕魯的屬性並加入對應的圖案
 		
 		//製作帕魯的工作能力資料表
 		const htmlPalWorks = listWorks.map(([name], index) =>
 		{
-			const path = Pal.works[index] > 0 ? `images/works/1/${name}.png` : `images/works/0/${name}.png`;
+			const path = Pal.works[index] > 0 ? `images/works/1/${name.toLowerCase()}.png` : `images/works/0/${name.toLowerCase()}.png`;
 			const level = Pal.works[index] > 0 ? Pal.works[index] : '';
 			
 			if (Pal.works[index] > listWorks[index][2]) listWorks[index][2] = Pal.works[index]; //若帕魯的技能等級大於listWorks中的最高等級則替代
