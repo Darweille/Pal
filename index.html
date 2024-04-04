@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Quickly Pal Breed Calculator</title>
+<link rel="stylesheet" type="text/css" href="desktop.css?20240213231401">
+<script type="text/javascript" src="database.js?20240213231401"></script>
+<script type="text/javascript" src="translations.js?20240213231401"></script>
+<script type="text/javascript" src="combos.js?20240213231401"></script>
+<script type="text/javascript" src="system.js?20240213231401"></script>
+</head>
+<body>
+<div id="divHeader">
+	<div id="divSearch"><img src="images/menu.png"><input id="inputPalID" name="inputPalID" type="text" oninput="filterPal()"></div>
+	<div id="divMenu">
+		<div id="divFilterOptions">
+			<div id="divLanguage"><img src="images/language.png"><span id="idLanguage"></span></div>
+			<div id="divTypeBOnly"><img src="images/checkbox_off.png"><span id="idTypeBOnly"></span></div>
+			<div id="divShowDetails"><img src="images/checkbox_off.png"><span id="idShowDetails"></span></div>
+		</div>
+		<div id="divLanguageMenu"></div>
+		<div id="divFilterElements"></div>
+		<div id="divFilterWorks"></div>
+	</div>
+	<hr>
+</div>
+
+<div id="divMain">
+	<div id="divMessages"></div>
+	<div id="divPalsData"></div>
+</div>
+
+<div id="divTip"></div>
+
+<div id="divStickyBottom">
+	<hr>
+	<div id="divBreedResult"></div>
+</div>
+
+<div id="divFooter">
+	<span id="spanDataVersion"></span>
+	<span><a href="https://github.com/Darweille" target="_blank">Darweille</a> © 2024</span>
+</div>
+</body>
+</html>
